@@ -1,0 +1,29 @@
+#creates a list of bicycle types and prints them out
+bicycles=['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles[-1])
+message="My first bicycle was a "+bicycles[0].title()+"."
+print(message)
+
+#creates a list of friends names and prints them out by index
+friends=['Austin', 'Mike', 'Kelsey']
+print(friends[0])
+print(friends[1])
+print(friends[2])
+#prints out messages to friends using index in a list of their names
+print(friends[0]+", how is it going today?")
+print(friends[1]+", how are you and Mo doing?")
+print(friends[2]+", how is Aerials class treating you?")
+
+#changing list attirbute
+motorcycles=['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+#replacing an element
+motorcycles[0]='ducati'
+print(motorcycles)
+#appending to lists
+motorcycles.append('honda')
+print(motorcycles)
+motorcycles.insert(0, 'honda')
+print(motorcycles)
+#deleting from lists
+del motorcycles[-1]

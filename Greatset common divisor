@@ -1,0 +1,18 @@
+def greatest_common_divisor(x,y):
+    print "For", x, "and", y,","  
+    r=x%y
+    while r>0:
+        r=x%y
+        if r ==0: 
+            print "the greatest common divisor is", y,"."
+        else:
+            q=y
+            x=q
+            y=r
+
+
+num1= int(raw_input("Enter a number: "))            
+num2= int(raw_input("Enter a number: "))
+greatest_common_divisor(num1,num2)
+greatest_common_divisor(5538,1105)
+greatest_common_divisor(8764,7732)   

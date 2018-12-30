@@ -1,0 +1,13 @@
+#List of friends
+friends=["Kevin","Karen","Jim","Oscar","Toby"]
+#prints out the list
+print(friends)
+#print out an element from the list
+print(friends[0])
+#print out the list from the back of list
+print(friends[-1])
+#print ouf the list from the second spot on
+print(friends[1:])
+#changes index position 1
+friends[1]="Mike"
+print(friends[1])

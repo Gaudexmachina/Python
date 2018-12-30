@@ -1,0 +1,7 @@
+#return statement
+
+def cubed(num):
+    return num*num*num
+
+number=input("Enter a number:")
+print(cubed(float(number)))

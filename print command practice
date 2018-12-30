@@ -1,0 +1,15 @@
+name="Giraffe Academy"
+#pos  0123456789
+age="50"
+
+
+print(name.lower())
+print(name.isupper())
+print(name.upper().isupper())
+print(len(name))
+
+print(name[0])
+print(name.index("Acad"))
+
+print(name.replace("Giraffe","Elephant"))
+print(name)

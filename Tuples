@@ -1,0 +1,6 @@
+#tuples   tuples are immutable
+coordinates=(4,5)
+print(coordinates[0])
+
+#difference between tuples and lists- cannot change tuples
+#store values that are never going to change as tuples

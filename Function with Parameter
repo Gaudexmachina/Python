@@ -1,0 +1,10 @@
+#function with parameter-allow you to store specific tasks that is recallable with passed in parameter
+
+#define the function
+def say_hi(name, age):
+    #indented section is part of this function
+    print("Hello "+name+", you are "+str(age)+"!")
+    
+#code not indented no longer is part fo the function
+
+say_hi("Mike", 35)

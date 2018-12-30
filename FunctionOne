@@ -1,0 +1,11 @@
+#functions-allow you to store specific tasks that is recallable
+
+#define the function
+def say_hi():
+    #indented section is part of this function
+    print("Hello User!")
+    
+#code not indented no longer is part fo the function
+print("Top")
+say_hi()
+print("Bottom")

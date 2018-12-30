@@ -1,0 +1,21 @@
+#List functions
+friends=["Kevin","Karen","Jim","Oscar","Toby"]
+lucky_numbers=[4,8,15,16,23,42]
+#extend function adds list onto another list
+#friends.extend(lucky_numbers)
+print(friends)
+#appends one element onto the end of a list
+friends.append("Creed")
+#inserts a name into a list at a position
+friends.insert(1,"Kelly")
+#removes the name Jim
+friends.remove("Jim")
+#pops an element form the list
+friends.pop()
+#checks the index for the value Oscar
+print(friends.index("Oscar"))
+
+friends.sort()
+lucky_numbers.sort()
+lucky_numbers.reversed()()
+friends2=friends.copy

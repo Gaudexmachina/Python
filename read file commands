@@ -1,0 +1,29 @@
+#read in files
+
+#opens the file employees.txt in read only mode
+open("employees.txt","r")
+#opens the file employees.txt in write only mode (modifiable file)
+open("employees.txt","w")
+#opens the file employees.txt in append(add info onto the end of the file)
+open("employees.txt","a")
+#opens the file employees.txt in read AND write mode
+open("employees.txt","r+")
+
+employee_file=open("employees.txt","r")
+
+#make sure to close a file after using it
+employee_file.close()
+
+#check to make sure a file is readable
+print(employee_file.readable())
+print(employee_file.read())
+#reads the next line in the file
+print(employee_file.readline())
+#reads all the lines in a file and puts them into an array
+print(employee_file.readlines())
+#prints out the first line from the array of all lines
+print(employee_file.readlines()[0])
+
+#for loop for printing out all lines from readlines array
+for employee in employee_file.readlines():
+    print(employee)

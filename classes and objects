@@ -1,0 +1,21 @@
+#Classes and Objects
+
+#Class is like defining your own data type
+
+#Creating a "student" datatype
+class Student:
+    #self stores the various attributes into the instantiated object
+    def __init__(self, name, major, gpa, is_on_probation): #initializes a student with the characteristics
+        #the objects name will be name
+        self.name=name
+        #the objects major will be major
+        self.major=major
+        self.gpa=gpa
+        self.is_on_probation=is_on_probation
+
+#creating an object of class Student
+student1=Student("Kevin","Geology",4.0,False)
+student2=Student("Aparna","Awesome",4.0,False)
+print(student1.name)
+print(student2.name)
+print(student2.gpa)

@@ -1,0 +1,13 @@
+#writing files
+
+#appending text to end of file
+employee_file=open("employees.txt","a")
+
+employee_file.write("Aparna - Barista")
+employee_file.write("\nKelly - Customer Service")
+employee_file.close()
+
+#overwriting a file
+employee_file=open("employees.txt","w")
+employee_file.write("Kelly - Customer Service") #would overwrite whole file with ""
+

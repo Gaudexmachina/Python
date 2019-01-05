@@ -1,0 +1,6 @@
+num=int(input("Enter a number: "))
+check=int(input("Enter a divisor: "))
+if num%check==0:
+    print(num+" is evenly divisible by "+check+".")
+else:
+    print(num+" is not evenly divisible by "+check+".")

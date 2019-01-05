@@ -1,0 +1,17 @@
+#Finding common values in lists
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c=[]
+for element in a:
+    if element in b and element not in c:
+        c.append(element)
+print(c)        
+        
+#cprints a set-which has only unique values from a list
+print(set(a))
+print(set(b))
+#prints the overlap set of two unique sets formed from the lists a and b
+print(set(a)&set(b))
+
+import random
+newlist=list(set(random.sample(range(30), 10))|set(random.sample(range(30), 12)));print(newlist)

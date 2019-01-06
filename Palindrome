@@ -1,0 +1,17 @@
+#Checks if a phrase is a palindrome
+palindrome=input("Enter a string: ")
+check=True
+i=0
+for index in palindrome:
+    i-=1
+    if index!=palindrome[i]:
+        check=False
+if check==True:
+    print("The phrase is a palindrome.")
+else:
+    print("The phrase is not a palindrome.")
+    
+if palindrome==palindrome[::-1]:
+    print("The phrase is a palindrome.")
+else:
+    print("The phrase is not a palindrome.")

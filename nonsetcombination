@@ -1,0 +1,13 @@
+#non set combination
+import random
+a = random.sample(range(20),10)
+b = random.sample(range(20),10)
+c=[]
+combined=[spot for spot in a if spot in b]
+for item in combined:
+    if item not in c:
+        c.append(item)
+
+print(a)
+print(b)
+print(sorted(c))

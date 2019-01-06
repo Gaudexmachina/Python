@@ -1,0 +1,12 @@
+#2 player rock paper scissors
+player_1=4
+player_2=4
+while (player_1 == player_2):
+    while (player_1 not in [1,2,3]):
+        player_1=int(input("Player 1 please input 1 for Rock, 2 for Paper, or 3 for Scissors:"))
+    while (player_2 not in [1,2,3]):
+        player_2=int(input("Player 2 please input 1 for Rock, 2 for Paper, or 3 for Scissors:"))
+if (player_1==1 and player_2==3)|(player_1==2 and player_2==1)|(player_1==3 and player_2==2):
+    print("Player 1 Won!")
+else:
+    print("Player 2 Won!")

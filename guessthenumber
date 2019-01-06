@@ -2,11 +2,11 @@
 
 import random
 
-answer=random.randint(0,9)
-check=10
+answer=random.randint(1,9)
+check=0
 count=0
 while(check!=answer):
-    check=int(input("Enter a guess from 0 to 9: "))
+    check=int(input("Enter a guess from 1 to 9: "))
     count+=1
     if check<answer:
         print("Guess too low")

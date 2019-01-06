@@ -1,0 +1,20 @@
+#prime number checker
+def is_prime(number):
+    check=True
+    for divisor in range(2,number):
+        if number%divisor==0:
+            check=False
+    return check
+
+#num=int(input("Enter a number to determine if it is prime: "))
+#if is_prime(num):
+#    print(str(num)+" is Prime.")
+#else:
+#    print(str(num)+" is not Prime.")
+iteration=int(input("Enter a number of values to check for primes: "))
+c=[]
+for counter in range(1,iteration):
+    if is_prime(counter):
+        print(str(counter)+" is Prime.")
+        c.append(counter)
+print("The number of primes in the first "+str(iteration)+" numbers is "+str(len(c)))

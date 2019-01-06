@@ -1,0 +1,14 @@
+#prime number checker
+def is_prime(number):
+    check=True
+    maxlim=(int(number/2))
+    for divisor in range(2,maxlim):
+        if num%divisor==0:
+            check=False
+    return check
+
+num=int(input("Enter a number to determine if it is prime: "))
+if is_prime(num):
+    print(str(num)+" is Prime.")
+else:
+    print(str(num)+" is not Prime.")

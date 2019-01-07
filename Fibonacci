@@ -1,0 +1,19 @@
+#ask for a number to print out that number of fibonacci numbers
+
+def fibonacci(num):
+    last=0
+    previous=1
+    fibnum=0
+    a=[]
+    while (num>0):
+        fibnum=previous+last
+        previous=last
+        last=fibnum
+        num-=1
+        a.append(fibnum)
+    return a
+num=int(input("Enter the number of Fibonacci numbers to print: "))
+print(fibonacci(num))
+
+
+

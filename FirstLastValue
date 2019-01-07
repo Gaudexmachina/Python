@@ -1,0 +1,8 @@
+#Find the first and last value of a list
+a = [5, 10, 15, 20, 25]
+
+def first_last(first_last_list):
+    b=[first_last_list[0],first_last_list[-1]]
+    return b
+print(first_last(a))
+

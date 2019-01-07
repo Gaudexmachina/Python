@@ -1,0 +1,15 @@
+#Removes duplicates from a list and returns the result
+
+def remove_duplicates(alist):
+    a=[]
+    for element in alist:
+        if element not in a:
+            a.append(element)
+    return a
+
+def remove_dupe_set(alist):
+    return sorted(set(alist))
+    
+b=[1,1,2,3,5,8,11,21,34,55,89]
+print(remove_duplicates(b))
+print(remove_dupe_set(b))

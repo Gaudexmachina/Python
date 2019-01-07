@@ -1,0 +1,10 @@
+#reorder a sentence using lists
+
+def reverse_string(gnirts):
+    splitstring=gnirts.split()
+    reverse=[]
+    for element in splitstring:
+        reverse.insert(0,element)
+    return " ".join(reverse)
+    
+print(reverse_string("Always remember this program."))

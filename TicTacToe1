@@ -1,0 +1,16 @@
+#draws a gameboard
+#part 1 of 4 playing tic tac toe
+
+def draw_board(size):
+    counter=size
+    space="   |"
+    line=" ---"
+    print(line*size)
+    while (counter>0):
+        print("|"+space*size)
+        print(line*size)
+        counter-=1
+
+
+size=int(input("Enter the spaces on a side of a game board: "))
+draw_board(size)

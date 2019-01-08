@@ -1,0 +1,31 @@
+#ordered search through a sorted list (ordered_list) for a (number)
+
+def find_term(number,ordered_list):
+    term=False
+    for element in ordered_list:
+        if element == number:
+            term=True
+    print("It is "+str(term)+" that "+str(number)+" is in the list.")
+a=[1,3,4,6,7,9,12,13,24,35,46,57]
+find_term(14,a)
+
+#binary search through a sorted list (ordered_list) for a (number)
+
+def search_list(number, ordered_list):
+    endex=len(ordered_list)-1
+    startex=1
+    
+    while True:
+    
+        middle=int((startex-endex)/2)
+        if middle<0 or middle<startex or middle>endex:
+            return False
+        
+        check=ordered_list[middle]
+        if check==number:
+            return True   
+        elif check>middle:
+            startex=middle
+        else:
+            endex=middle
+print("It is "+str(search_list(14,a))+" that "+str(14)+" is in the list.")   

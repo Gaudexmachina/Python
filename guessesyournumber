@@ -1,0 +1,24 @@
+#The computer guesses your number between 1 and 100
+import random
+print("Think of a number between 1 and 100 and I will guess it!")
+guess=random.randint(1,100)
+checknum=0
+counter=0
+print("I guess the your number is: "+str(guess))
+lower=1
+upper=100
+while checknum!=3:
+    checknum=int(input("Enter 1 if my guess is too high.\nEnter 2 if my guess is too low.\nEnter 3 if I guess correctly."))
+    if checknum==1:
+        upper=guess
+        guess=int((upper+lower)/2)
+        print("Is your number: "+str(guess)+"?")
+    elif checknum==2:
+        lower=guess
+        guess=int((upper+lower)/2)
+        print("Is your number: "+str(guess)+"?")
+    elif checknum!=3:
+        print("Dont waste my guesses, Enter 1,2 or 3:")
+    counter+=1
+    
+print("I guessed it in "+str(counter)+" tries.")

@@ -38,15 +38,32 @@ def check_win(game):
         return 0
 
 def run_turn(player,game):
-    placement=0
-    while (placement not in (1,2,3,4,5,6,7,8,9)):
-        placement=int(input("Enter the position you want to make your mark player "+str(player)+"."))
+    placement=int(input("Enter the position you want to make your mark player "+str(player)+"."))
+    if placement in (1,4,7):
+        row=0
+    elif placement in (2,5,8):
+        row=1
+    else:
+        row=2
+    if placement in (1,2,3):
+        column=0
+    elif placement in (4,5,6):
+        column=1
+    else:
+        column=2
+    game[column][row]=player
         
     
-    
-    
-draw_board(3,board)  
-run_turn(1,board)    
+turns=0   
+while(check_win(board)==0):   
+    for player in (1,2) while(turns<9):
+        draw_board(3,board) 
+        run_turn(player,board)
+        turns+=1
+        print(turns)
+        if (check_win(board)==player):
+            break
+draw_board(3,board)
 if (check_win(board)==0):
     print("No winner")
 if (check_win(board)==1):

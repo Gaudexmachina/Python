@@ -1,0 +1,36 @@
+#Guess the letter
+missed_guess=0
+hangman=[[' ','_','_','_'],
+     [' |',' ',' ','|'],
+     [' ',' ',' ',' |'],
+     [' ',' ',' ',' |'],
+     [' ',' ',' ',' |'],
+     [' ',' ',' ',' |'],
+     [' ',' ',' ',' |'],
+     ['_','_','_','_|']]
+def show_hangman(missed_guess):
+    if missed_guess==1:
+        hangman[2][1]='O'
+    for i in range(0,8):
+        print(hangman[i][0]+hangman[i][1]+hangman[i][2]+hangman[i][3])
+    
+def check_letter(letter,missed_guess):
+    for i in range(0,len(word)):
+        if letter.upper()==word[i]:
+            checked[i]=letter.upper()
+    if letter.upper() not in word:
+        print("Letter not found, dont get hanged!")
+        missed_guess+=1
+
+word=['E','V','A','P','O','R','A','T','E']
+checked=['_','_','_','_','_','_','_','_','_']
+
+while(word!= checked):
+    if missed_guess>10:
+        print("You are dead!")
+    yourchar=input("Enter a letter: ")
+    check_letter(yourchar,missed_guess)
+    show_hangman(missed_guess)
+    print(checked)
+if word==checked:
+    print("You guessed it correctly!")

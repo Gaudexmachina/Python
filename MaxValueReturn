@@ -1,0 +1,16 @@
+#returns the max of input values
+
+def return_max(number):
+    holder=[]
+    counter=number
+    while (counter>0):
+        value=int(input("Enter an integer: "))
+        holder.append(value)
+        counter-=1
+    holder=sorted(holder)
+    value=holder[-1]
+    return value
+    
+    
+num=int(input("Enter the number of values to check for the maximum: "))
+print("The maximum value is: "+str(return_max(num)))

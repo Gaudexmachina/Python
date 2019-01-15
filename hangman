@@ -11,10 +11,25 @@ hangman=[[' ','_','_','_'],
 def show_hangman(missed_guess):
     if missed_guess==1:
         hangman[2][1]='O'
+    elif missed_guess==2:
+        hangman[3][1]='|'
+    elif missed_guess==3:
+        hangman[3][0]='-'
+    elif missed_guess==4:
+        hangman[3][2]='-'
+    elif missed_guess==5:
+        hangman[4][1]='|'
+    elif missed_guess==6:
+        hangman[5][0]='/'
+    elif missed_guess==7:
+        hangman[5][2]='\\'
+    else:
+        print("Not dead yet!")
     for i in range(0,8):
         print(hangman[i][0]+hangman[i][1]+hangman[i][2]+hangman[i][3])
     
-def check_letter(letter,missed_guess):
+def check_letter(letter):
+    global missed_guess
     for i in range(0,len(word)):
         if letter.upper()==word[i]:
             checked[i]=letter.upper()
@@ -22,14 +37,15 @@ def check_letter(letter,missed_guess):
         print("Letter not found, dont get hanged!")
         missed_guess+=1
 
-word=['E','V','A','P','O','R','A','T','E']
+word=['E','N','D','O','S','C','O','P','E']
 checked=['_','_','_','_','_','_','_','_','_']
 
 while(word!= checked):
-    if missed_guess>10:
+    if missed_guess>6:
         print("You are dead!")
+        break
     yourchar=input("Enter a letter: ")
-    check_letter(yourchar,missed_guess)
+    check_letter(yourchar)
     show_hangman(missed_guess)
     print(checked)
 if word==checked:

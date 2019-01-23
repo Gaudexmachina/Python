@@ -1,0 +1,16 @@
+color_list_1 = set(["White", "Black", "Red"]) 
+color_list_2 = set(["Red", "Green"])
+
+
+def compare_list(list1,list2):
+    compared=[]
+    for element in list1:
+        check=True
+        for element2 in list2:
+            if element==element2:
+                check=False
+        if check:
+            compared.append(element)
+    print(compared)
+
+compare_list(color_list_1,color_list_2)

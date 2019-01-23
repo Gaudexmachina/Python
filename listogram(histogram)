@@ -1,0 +1,12 @@
+listage=[1,4,5,6,4,3,5,6,7,3,4,5,6,7]
+
+def histogram(array):
+    for i in array:
+        phrase=''
+        times=i
+        while (times>0):
+            phrase+='@'
+            times+=-1
+        print(phrase)
+
+histogram(listage)
